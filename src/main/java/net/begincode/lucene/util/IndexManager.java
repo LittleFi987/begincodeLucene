@@ -38,10 +38,9 @@ public class IndexManager {
 	}
 	
 	/**
+	 * 获取索引的IndexManager对象
 	 * @param indexName
 	 * @return
-	 * @Author:lulei  
-	 * @Description: 获取索引的IndexManager对象
 	 */
 	public static IndexManager getIndexManager(String indexName) {
 		return LazyIndexManager.indexManagerMap.get(indexName);
@@ -78,9 +77,8 @@ public class IndexManager {
 	}
 	
 	/**
+	 * 获取最新可用的indexSearcher
 	 * @return
-	 * @Author:lulei  
-	 * @Description: 获取最新可用的indexSearcher
 	 */
 	public IndexSearcher getIndexSearcher() {
 		try {
@@ -92,9 +90,8 @@ public class IndexManager {
 	}
 	
 	/**
+	 * 释放indexSearcher
 	 * @param indexSearcher
-	 * @Author:lulei  
-	 * @Description: 释放indexSearcher
 	 */
 	public void relase(IndexSearcher indexSearcher) {
 		try {
@@ -105,8 +102,7 @@ public class IndexManager {
 	}
 	
 	/**
-	 * @Author:lulei  
-	 * @Description: 设置indexSearcher的守护线程
+	 * 设置indexSearcher的守护线程
 	 */
 	private void setThread () {
 		//内存索引重读线程
